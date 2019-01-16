@@ -1,0 +1,101 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "GROBOLD"; /* modified */
+  background-image:url(../asset/img/illustration.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.game__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.game__controls img {
+  height: 7vh;
+  width: auto;
+}
+
+.rules {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  width: 20%;
+}
+
+.home__story {
+  color: black;
+  background-color: white;
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 350px;
+  margin-right: 350px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.home__enter {
+  width: 25%;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home__enter img {
+  height: 40px;
+  animation: show 0.5s infinite;
+}
+
+@keyframes show {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.home__names {
+  position: absolute;
+  color: white;
+  bottom: 20px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+
+  li {
+    display: inline;
+  }
+}
+
+.love {
+  height: 20px;
+}
+
+#element_lecture img {
+  position: absolute;
+  width: 5vw;
+  height: 6vh;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

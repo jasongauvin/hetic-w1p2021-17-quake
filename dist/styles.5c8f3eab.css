@@ -1,0 +1,386 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+
+.container {
+  /* modified */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "GROBOLD";
+  /* modified */
+  background-image: url(illustration.684bbcba.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.lose__title {
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 60px; }
+
+.badguyImg {
+  height: 200px;
+  width: auto; }
+
+.finalScore {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  background-color: #0c0c0c;
+  box-shadow: 10px 10px 40px 0px #00000079;
+  width: auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px; }
+
+.returnBtn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 15px 30px;
+  background-color: #df3939;
+  border: 5px solid black;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.contain {
+  background: url(trees.ee771cae.png), url(fougeres.328f2a14.png);
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+
+.info {
+  width: auto;
+  color: white;
+  font-size: 15px;
+  padding: 7px 15px;
+  background-color: #0c0c0c;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  width: auto;
+  bottom: 10px;
+  font-family: "GROBOLD";
+  box-shadow: 10px 10px 40px 0px #00000079; }
+
+.info--menuBtn {
+  cursor: pointer;
+  right: 10px; }
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -5;
+  background-image: url("grass.8c78f921.png"); }
+
+.sprite, .hero, .badboy, .bullet, .fireball, .waterball {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  z-index: 100; }
+
+.hero {
+  background-image: url("persoWalkA.646e4284.png");
+  animation: hero-move 0.5s infinite; }
+
+@keyframes hero-move {
+  25% {
+    background-image: url("persoWalkB.5e2eee10.png"); }
+  50% {
+    background-image: url("persoWalkC.e0c6c56d.png"); }
+  75% {
+    background-image: url("persoWalkD.9f89d409.png"); } }
+
+.badboy {
+  background-image: url("badWalkA.4ee200c9.png");
+  animation: bad-move 0.5s infinite; }
+
+@keyframes bad-move {
+  33% {
+    background-image: url("badWalkB.f35d3151.png"); }
+  66% {
+    background-image: url("badWalkC.4081bb94.png"); } }
+
+.bullet, .fireball, .waterball {
+  width: 20px;
+  height: 20px;
+  top: 33px;
+  left: 25px; }
+
+.fireball {
+  background-image: url(flame.681cf1c4.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.waterball {
+  background-image: url(water.e0f4f31a.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.lives {
+  display: flex;
+  justify-content: center; }
+  .lives .heart {
+    background-image: url(heart.1cbb4d31.png);
+    height: 45px;
+    width: 45px;
+    background-position: center;
+    background-size: contain; }
+
+.tile {
+  background-image: url(grass.8c78f921.png);
+  position: absolute;
+  z-index: 10; }
+
+.tile--burned {
+  background-image: url(burned-tile-flame.d13bb6e5.png), url(burned-tile.d00f20e7.png);
+  background-size: cover;
+  border-radius: 20%; }
+
+.menuBtn {
+  color: white;
+  font-size: 15px;
+  padding: 7px 15px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-family: "GROBOLD";
+  box-shadow: 10px 10px 40px 0px #00000079; }
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "GROBOLD";
+  /* modified */
+  background-image: url(illustration.684bbcba.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.game__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%; }
+
+.game__controls img {
+  height: 7vh;
+  width: auto; }
+
+.rules {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  width: 20%; }
+
+.home__story {
+  color: black;
+  background-color: white;
+  border: 5px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 350px;
+  margin-right: 350px;
+  line-height: 150%;
+  text-align: center; }
+
+.home__enter {
+  width: 25%;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.home__enter img {
+  height: 40px;
+  animation: show 0.5s infinite; }
+
+@keyframes show {
+  0% {
+    opacity: 100%; }
+  50% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+.home__names {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .home__names li {
+    display: inline; }
+
+.love {
+  height: 20px; }
+
+#element_lecture img {
+  position: absolute;
+  width: 5vw;
+  height: 6vh;
+  top: 10px;
+  right: 10px;
+  cursor: pointer; }
+
+@font-face {
+  font-family: "GROBOLD";
+  src: url(GROBOLD.dd51172e.woff2) format("woff2"), url(GROBOLD.4f326980.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* modified */
